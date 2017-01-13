@@ -2,37 +2,26 @@
  
 if(isset($_POST['email'])) {
  
-     
- 
-    // EDIT THE 2 LINES BELOW AS REQUIRED
+    
  
     $email_to = "21897@ma-web.nl";
  
-    $email_subject = "homo";
- 
-     
- 
+    $email_subject = "Vraag Van Klomp Tot Kunst";
      
  
     function died($error) {
  
-        // your error code can go here
+        echo "Sorry, maar het formulier is niet compleet!.<br />";
  
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
- 
-        echo "These errors appear below.<br /><br />";
+        echo "Deze fouten verschijnen hier onder:<br /><br />";
  
         echo $error."<br /><br />";
  
-        echo "Please go back and fix these errors.<br /><br />";
+        echo "Het zou fijn zijn als u deze fouten verbeterd!<br /><br />";
  
         die();
  
     }
- 
-     
- 
-    // validation expected data exists
  
     if(!isset($_POST['first_name']) ||
  
@@ -44,21 +33,21 @@ if(isset($_POST['email'])) {
  
         !isset($_POST['comments'])) {
  
-        died('We are sorry, but there appears to be a problem with the form you submitted.');       
+        died('Sorry, maar het formulier is niet compleet.');       
  
     }
  
      
  
-    $first_name = $_POST['first_name']; // required
+    $first_name = $_POST['first_name'];
  
-    $last_name = $_POST['last_name']; // required
+    $last_name = $_POST['last_name'];
  
-    $email_from = $_POST['email']; // required
+    $email_from = $_POST['email'];
  
-    $telephone = $_POST['telephone']; // not required
+    $telephone = $_POST['telephone'];
  
-    $comments = $_POST['comments']; // required
+    $comments = $_POST['comments'];
  
      
  
@@ -68,7 +57,7 @@ if(isset($_POST['email'])) {
  
   if(!preg_match($email_exp,$email_from)) {
  
-    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+    $error_message .= 'Sorry, maar uw e-mail adres klopt niet.<br />';
  
   }
  
@@ -76,19 +65,19 @@ if(isset($_POST['email'])) {
  
   if(!preg_match($string_exp,$first_name)) {
  
-    $error_message .= 'The First Name you entered does not appear to be valid.<br />';
+    $error_message .= 'Sorry, maar uw voornaam klopt niet.<br />';
  
   }
  
   if(!preg_match($string_exp,$last_name)) {
  
-    $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
+    $error_message .= 'Sorry, maar uw achternaam klopt niet.<br />';
  
   }
  
   if(strlen($comments) < 2) {
  
-    $error_message .= 'The Comments you entered do not appear to be valid.<br />';
+    $error_message .= 'Sorry, maar uw vraag klopt niet.<br />';
  
   }
  
@@ -98,7 +87,7 @@ if(isset($_POST['email'])) {
  
   }
  
-    $email_message = "Form details below.\n\n";
+    $email_message = "Details:\n\n";
  
      
  
@@ -112,21 +101,17 @@ if(isset($_POST['email'])) {
  
      
  
-    $email_message .= "First Name: ".clean_string($first_name)."\n";
+    $email_message .= "Voornaam: ".clean_string($first_name)."\n";
  
-    $email_message .= "Last Name: ".clean_string($last_name)."\n";
+    $email_message .= "Achternaam: ".clean_string($last_name)."\n";
  
     $email_message .= "Email: ".clean_string($email_from)."\n";
  
-    $email_message .= "Telephone: ".clean_string($telephone)."\n";
+    $email_message .= "Telefoonnummer: ".clean_string($telephone)."\n";
  
-    $email_message .= "Comments: ".clean_string($comments)."\n";
- 
-     
+    $email_message .= "Vraag: ".clean_string($comments)."\n";
  
      
- 
-// create email headers
  
 $headers = 'From: '.$email_from."\r\n".
  
@@ -135,21 +120,12 @@ $headers = 'From: '.$email_from."\r\n".
 'X-Mailer: PHP/' . phpversion();
  
 @mail($email_to, $email_subject, $email_message, $headers);  
- 
-?>
- 
- 
- 
-<!-- include your own success html here -->
- 
- 
- 
-Thank you for contacting us. We will be in touch with you very soon.
- 
- 
- 
-<?php
- 
+	
+	echo "<script>
+		alert('Het bericht is verzonden, wij proberen zo snel mogelijk contact met u op te nemen. U word nu teruggeleid naar de homepage.');
+		window.location.href='http://21897.hosts.ma-cloud.nl/bewijzenmap/jaar2/periode2/Edam_Volendam/Website/';
+		</script>";
+	
+	
 }
- 
 ?>
