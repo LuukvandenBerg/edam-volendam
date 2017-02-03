@@ -37,7 +37,7 @@
         <div class="container">
             
             <div class="col-33 edam">
-                <a href="#">
+                <a href="location.php?location=edam">
                     <div class="overlay">
                         <h3>Edam</h3>
                         <p>Lorem ipsum dolor sit amet , 
@@ -49,7 +49,7 @@
             </div>
             
             <div class="col-33 volendam">
-                <a href="#">
+                <a href="location.php?location=volendam">
                     <div class="overlay">
                         <h3>Volendam</h3>
                         <p>Lorem ipsum dolor sit amet , 
@@ -59,7 +59,7 @@
                 </a>                
             </div>
             <div class="col-33 warder">
-                <a href="#">
+                <a href="location.php?location=warder">
                     <div class="overlay">
                         <h3>Warder</h3>
                         <p>Lorem ipsum dolor sit amet , 
@@ -69,7 +69,7 @@
                 </a>
             </div>
             <div class="col-33 kwadijk">
-                <a href="#">
+                <a href="location.php?location=kwadijk">
                     <div class="overlay">
                         <h3>Kwadijk</h3>
                         <p>Lorem ipsum dolor sit amet , 
@@ -80,7 +80,7 @@
             </div>
 
             <div class="col-33 oosthuizen">
-                <a href="#">
+                <a href="location.php?location=oosthuizen">
                     <div class="overlay">
                         <h3>Oosthuizen</h3>
                         <p>Lorem ipsum dolor sit amet , 
@@ -90,7 +90,7 @@
                 </a>                
             </div>
             <div class="col-33 schardam">
-                <a href="#">
+                <a href="location.php?location=schardam">
                     <div class="overlay">
                         <h3>Schardam</h3>
                         <p>Lorem ipsum dolor sit amet , 
@@ -100,7 +100,7 @@
                 </a>   
             </div>
             <div class="col-33 beets">
-                <a href="#">
+                <a href="location.php?location=beets">
                     <div class="overlay">
                         <h3>Beets</h3>
                         <p>Lorem ipsum dolor sit amet , 
@@ -110,7 +110,7 @@
                 </a> 
             </div>
             <div class="col-33 middelie">
-                <a href="#">
+                <a href="location.php?location=middelie">
                     <div class="overlay">
                         <h3>Middelie</h3>
                         <p>Lorem ipsum dolor sit amet , 
@@ -120,7 +120,7 @@
                 </a> 
             </div>
             <div class="col-33 hobrede">
-                <a href="#">
+                <a href="location.php?location=hobrede">
                     <div class="overlay">
                         <h3>Hobrede</h3>
                         <p>Lorem ipsum dolor sit amet , 
@@ -191,18 +191,18 @@
 
                     <div class="col-50">
                         <h2>Schrijf uw organisatie in!</h2>
-                        <form>
+                        <form method="post" action="add_organ.php">
                             <input class="first" type="text" placeholder="Voornaam" name="voornaam">
                             <input type="text" placeholder="Achternaam" name="achternaam">
                             <input class="first" type="text" placeholder="Telefoon" name="telefoon">
                             <input type="text" placeholder="E-mail" name="e-mail">
                             <input class="first" type="text" placeholder="Naam organisatie" name="naam-organisatie">
                             <input type="text" placeholder="Website" name="website">
-                            <select class="first">
+                            <select class="first" name="categorie">
                                 <option value="cultuu">Cultuur</option>
                                 <option value="kunst">Kunst</option>
                             </select>
-                            <select>
+                            <select name="stad">
                                 <option value="edam">Edam</option>
                                 <option value="volendam">Volendam</option>
                                 <option value="warder">Warder</option>

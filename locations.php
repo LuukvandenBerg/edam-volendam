@@ -1,7 +1,104 @@
 <?php @include('partials/head.php'); ?>
+<?php @include('partials/search-bar.php'); ?>
 <?php @include('partials/nav.php'); ?>
+<section id="places">
+        <div class="container">
+            <div class="col-33 edam">
+                <a href="location.php?location=edam">
+                    <div class="overlay">
+                        <h3>Edam</h3>
+                        <p>Lorem ipsum dolor sit amet , 
+                            consectetur adipiscing amet elit.consectetur adipiscing amet elit.
 
-    <!-- Header -->
+                        </p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-33 volendam">
+                <a href="location.php?location=volendam">
+                    <div class="overlay">
+                        <h3>Volendam</h3>
+                        <p>Lorem ipsum dolor sit amet , 
+                            consectetur adipiscing amet elit. consectetur adipiscing amet elit.
+                        </p>
+                    </div>
+                </a>                
+            </div>
+            <div class="col-33 warder">
+                <a href="location.php?location=warder">
+                    <div class="overlay">
+                        <h3>Warder</h3>
+                        <p>Lorem ipsum dolor sit amet , 
+                            consectetur adipiscing amet elit. consectetur adipiscing amet elit.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-33 kwadijk">
+                <a href="location.php?location=warder">
+                    <div class="overlay">
+                        <h3>Kwadijk</h3>
+                        <p>Lorem ipsum dolor sit amet , 
+                            consectetur adipiscing amet elit. consectetur adipiscing amet elit.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-33 oosthuizen">
+                <a href="locations.php?location=oosthuizen">
+                    <div class="overlay">
+                        <h3>Oosthuizen</h3>
+                        <p>Lorem ipsum dolor sit amet , 
+                            consectetur adipiscing amet elit. consectetur adipiscing amet elit.
+                        </p>
+                    </div>
+                </a>                
+            </div>
+            <div class="col-33 schardam">
+                <a href="locations.php?location=schardam">
+                    <div class="overlay">
+                        <h3>Schardam</h3>
+                        <p>Lorem ipsum dolor sit amet , 
+                            consectetur adipiscing amet elit. consectetur adipiscing amet elit.
+                        </p>
+                    </div>
+                </a>   
+            </div>
+            <div class="col-33 beets">
+                <a href="locations.php?location=beets">
+                    <div class="overlay">
+                        <h3>Beets</h3>
+                        <p>Lorem ipsum dolor sit amet , 
+                            consectetur adipiscing amet elit. consectetur adipiscing amet elit.
+                        </p>
+                    </div>
+                </a> 
+            </div>
+            <div class="col-33 middelie">
+                <a href="locations.php?location=middelie">
+                    <div class="overlay">
+                        <h3>Middelie</h3>
+                        <p>Lorem ipsum dolor sit amet , 
+                            consectetur adipiscing amet elit. consectetur adipiscing amet elit.
+                        </p>
+                    </div>
+                </a> 
+            </div>
+            <div class="col-33 hobrede">
+                <a href="locations.php?location=hobrede">
+                    <div class="overlay">
+                        <h3>Hobrede</h3>
+                        <p>Lorem ipsum dolor sit amet , 
+                            consectetur adipiscing amet elit. consectetur adipiscing amet elit.
+                        </p>
+                    </div>
+                </a> 
+            </div>
+        </div>
+    </section>
+    <!-- Header 
             <header>
                 <div class="container">
                     <div class="image" style="background: url('images/media/header_edam.jpg') center;">
@@ -13,10 +110,8 @@
                     </div>
                 </div>
             </header>
-    <!-- End Header -->
 
 
-    <!-- Locaties -->
 		<section id="locations">
 			<div class="container">
 				
@@ -27,9 +122,9 @@
 			</aside>
 
 			<div class="thumbs">
-
+                
 				<div class="col-25 filter-kunst" style="background: url('http://www.egloshowroom.nl/wp-content/uploads/2014/04/IMG_6013_tonal.jpg') no-repeat center top; background-size: cover;">
-					<a href="#">
+					<a href="locations.php?location=edam">
 					    <div class="overlay">
 					        <h3>Edam Museaum</h3>
 					        <p>Lorem ipsum dolor sit amet , 
@@ -116,7 +211,6 @@
 
 			</div>
 		</section>
-	<!-- End Locaties -->
 
 
 
